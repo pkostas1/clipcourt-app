@@ -1,236 +1,61 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ClipCourt — Highlight reels made simple</title>
-    <meta name="description" content="Turn long game footage into highlight reels in minutes. No editing skills needed.">
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", sans-serif;
-            background: #0A0A0F;
-            color: #E0E0E0;
-            line-height: 1.7;
-        }
-        .hero {
-            text-align: center;
-            padding: 80px 20px 60px;
-            max-width: 640px;
-            margin: 0 auto;
-        }
-        .app-icon {
-            width: 120px;
-            height: 120px;
-            border-radius: 27px;
-            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-            margin: 0 auto 32px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 56px;
-            box-shadow: 0 8px 32px rgba(0,0,0,0.4);
-        }
-        h1 {
-            font-size: 3rem;
-            font-weight: 700;
-            color: #FFFFFF;
-            margin-bottom: 12px;
-            letter-spacing: -0.02em;
-        }
-        .tagline {
-            font-size: 1.3rem;
-            color: #8E8E93;
-            margin-bottom: 40px;
-        }
-        .cta {
-            display: inline-block;
-            background: #007AFF;
-            color: #FFFFFF;
-            font-size: 1.1rem;
-            font-weight: 600;
-            padding: 16px 40px;
-            border-radius: 14px;
-            text-decoration: none;
-            transition: opacity 0.2s;
-        }
-        .cta:hover { opacity: 0.85; }
-        .features {
-            max-width: 640px;
-            margin: 0 auto;
-            padding: 40px 20px 60px;
-        }
-        .feature {
-            display: flex;
-            gap: 20px;
-            align-items: flex-start;
-            margin-bottom: 36px;
-        }
-        .feature-icon {
-            font-size: 1.6rem;
-            flex-shrink: 0;
-            width: 44px;
-            height: 44px;
-            background: #1C1C1E;
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .feature h3 {
-            font-size: 1.1rem;
-            font-weight: 600;
-            color: #FFFFFF;
-            margin-bottom: 4px;
-        }
-        .feature p {
-            color: #8E8E93;
-            font-size: 0.95rem;
-        }
-        .steps {
-            max-width: 640px;
-            margin: 0 auto;
-            padding: 20px 20px 60px;
-            text-align: center;
-        }
-        .steps h2 {
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: #FFFFFF;
-            margin-bottom: 40px;
-        }
-        .step {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-            margin-bottom: 28px;
-            text-align: left;
-        }
-        .step-num {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background: #30D158;
-            color: #000;
-            font-weight: 700;
-            font-size: 1.1rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-shrink: 0;
-        }
-        .step p {
-            color: #C7C7CC;
-            font-size: 1.05rem;
-        }
-        .privacy-banner {
-            text-align: center;
-            padding: 40px 20px;
-            border-top: 1px solid #2C2C2E;
-            max-width: 640px;
-            margin: 0 auto;
-        }
-        .privacy-banner p {
-            color: #8E8E93;
-            font-size: 0.95rem;
-        }
-        footer {
-            text-align: center;
-            padding: 40px 20px;
-            border-top: 1px solid #2C2C2E;
-        }
-        footer a {
-            color: #4A90D9;
-            text-decoration: none;
-            margin: 0 16px;
-            font-size: 0.9rem;
-        }
-        footer a:hover { text-decoration: underline; }
-        .copyright {
-            color: #636366;
-            font-size: 0.85rem;
-            margin-top: 20px;
-        }
-    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ClipCourt — Keep the plays. Cut the downtime.</title>
+  <meta name="description" content="Turn your game footage into a highlight reel. Clip, keep score, and export on iPhone, iPad, and Mac. Your videos are processed on your device.">
+  <meta name="theme-color" content="#f5f4ee">
+  <meta property="og:title" content="ClipCourt — Keep the plays. Cut the downtime.">
+  <meta property="og:description" content="A simple video editor for your best plays. For iPhone, iPad, and Mac.">
+  <meta property="og:image" content="https://clipcourt-editor.vercel.app/assets/clipcourt-mac.jpg">
+  <meta property="og:url" content="https://clipcourt-editor.vercel.app/">
+  <meta property="og:type" content="website">
+  <link rel="canonical" href="https://clipcourt-editor.vercel.app/">
+  <link rel="icon" type="image/png" href="/assets/app-icon.png">
+  <link rel="apple-touch-icon" href="/assets/app-icon.png">
+  <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
-    <div class="hero">
-        <div class="app-icon">🎬</div>
-        <h1>ClipCourt</h1>
-        <p class="tagline">Turn long game footage into highlight reels in minutes. No editing skills needed.</p>
-    </div>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header wrap">
+    <a class="brand" href="/" aria-label="ClipCourt home"><img src="/assets/app-icon.png" width="38" height="38" alt=""><span>ClipCourt</span></a>
+    <nav aria-label="Main navigation"><a href="#how-it-works">The app</a><a href="/support">Support</a><a class="nav-download" href="https://apps.apple.com/app/clipcourt/id6758654179">Get ClipCourt <span aria-hidden="true">↗</span></a></nav>
+  </header>
+  <main id="main">
+    <section class="hero wrap" aria-labelledby="hero-title">
+      <p class="eyebrow">Game footage. Just the good parts.</p>
+      <div class="hero-intro">
+        <h1 id="hero-title">Keep the plays.<br><span>Cut the downtime.</span></h1>
+        <div class="hero-copy"><p>Turn a full game into the moments worth watching again. A simple video editor for iPhone, iPad, and Mac.</p><a class="button" href="https://apps.apple.com/app/clipcourt/id6758654179">Download on the App Store <span aria-hidden="true">↗</span></a></div>
+      </div>
+      <figure class="hero-product"><img src="/assets/clipcourt-mac.jpg" alt="ClipCourt on Mac showing beach volleyball footage, a scoreboard overlay, and selected clips on the timeline." width="2000" height="1380" fetchpriority="high"><figcaption><span>The full game in. Your highlights out.</span><span>ClipCourt on Mac</span></figcaption></figure>
+    </section>
 
-    <div class="steps">
-        <h2>How It Works</h2>
-        <div class="step">
-            <div class="step-num">1</div>
-            <p>Pick a video from your Camera Roll</p>
-        </div>
-        <div class="step">
-            <div class="step-num">2</div>
-            <p>Watch and tap Keep during the good parts</p>
-        </div>
-        <div class="step">
-            <div class="step-num">3</div>
-            <p>Export your highlight reel and share</p>
-        </div>
-    </div>
+    <section class="workflow wrap" id="how-it-works" aria-labelledby="workflow-title">
+      <div class="workflow-copy"><p class="eyebrow">Made for watching the game</p><h2 id="workflow-title">If you can spot<br> a good play,<br> you can make a reel.</h2>
+        <ol class="steps">
+          <li><div><h3>Bring your footage.</h3><p>Open a video from Photos or Files. Speed through the quiet stretches, or slow down to look at a play.</p></div></li>
+          <li><div><h3>Mark what matters.</h3><p>Tap when a highlight starts. Tap again when it ends. Your selected moments collect on the timeline.</p></div></li>
+          <li><div><h3>Send the highlights.</h3><p>Save everything as one reel, or export each clip separately for your team, a coach, or the group chat.</p></div></li>
+        </ol>
+      </div>
+      <figure class="phone-stage"><img src="/assets/clipcourt-iphone.jpg" alt="The iPhone editor during a volleyball rally, with two selected clips and the green clipping button active." width="736" height="1600" loading="lazy"><figcaption>A couple of taps. Another play kept.</figcaption></figure>
+    </section>
 
-    <div class="features">
-        <div class="feature">
-            <div class="feature-icon">✂️</div>
-            <div>
-                <h3>Tap to Clip</h3>
-                <p>One button. Tap to start keeping, tap to stop. No timeline dragging, no multi-track editing.</p>
-            </div>
-        </div>
-        <div class="feature">
-            <div class="feature-icon">⏩</div>
-            <div>
-                <h3>Speed Control</h3>
-                <p>Playback from 0.25x to 4x. Long-press to fast-forward through downtime.</p>
-            </div>
-        </div>
-        <div class="feature">
-            <div class="feature-icon">📊</div>
-            <div>
-                <h3>Scoreboard</h3>
-                <p>Track the score as you clip. Assign points after each highlight. Score overlay appears in your export.</p>
-            </div>
-        </div>
-        <div class="feature">
-            <div class="feature-icon">🎞️</div>
-            <div>
-                <h3>Flexible Export</h3>
-                <p>Export as one highlight reel or separate clips. Choose resolution up to 4K and frame rate up to 60fps.</p>
-            </div>
-        </div>
-        <div class="feature">
-            <div class="feature-icon">💾</div>
-            <div>
-                <h3>Auto-Save</h3>
-                <p>Close the app mid-edit and pick up right where you left off. Your progress is always saved.</p>
-            </div>
-        </div>
-        <div class="feature">
-            <div class="feature-icon">🔒</div>
-            <div>
-                <h3>Privacy First</h3>
-                <p>On-device editing, no accounts, and no advertising trackers. Your videos are not uploaded for analytics. Read our privacy policy for details.</p>
-            </div>
-        </div>
-    </div>
+    <section class="details wrap" aria-label="Editing tools">
+      <div><p class="detail-value">0.25×–4×</p><h3>Watch at your pace.</h3><p>Study the technique or move through the breaks. Pinch the timeline to get closer.</p></div>
+      <div><p class="detail-value">Keep score.</p><h3>Give every rally context.</h3><p>Assign points as you clip. Include the scoreboard in your export so the score stays with the action.</p></div>
+      <div><p class="detail-value">Pick it back up.</p><h3>Your progress is saved.</h3><p>Reopen the same video to continue your edit. Projects are saved locally for 30 days.</p></div>
+    </section>
 
-    <div class="privacy-banner">
-        <p>Your videos are processed on your device. You control what you export and share.</p>
-    </div>
+    <section class="export-section" aria-labelledby="export-title"><div class="export-layout wrap">
+      <div class="export-copy"><p class="eyebrow">Ready to share</p><h2 id="export-title">One reel.<br>Or every play.</h2><p>Put the whole story together, or keep each moment as its own file. Choose the export settings that fit your footage and where it’s going.</p><dl><div><dt>Export style</dt><dd>Highlight reel or separate clips</dd></div><div><dt>Resolution</dt><dd>Up to 4K</dd></div><div><dt>Frame rate</dt><dd>Up to 60 fps</dd></div></dl><p class="fine-print">Available settings depend on your source video.</p></div>
+      <figure class="export-image"><img src="/assets/clipcourt-export.jpg" alt="ClipCourt export settings with Highlight Reel and Separate Clips, resolution choices, and frame rate controls." width="740" height="1600" loading="lazy"><figcaption>Your footage. Your export settings.</figcaption></figure>
+    </div></section>
 
-    <footer>
-        <div>
-            <a href="/privacy">Privacy Policy</a>
-            <a href="/support">Support</a>
-        </div>
-        <p class="copyright">&copy; 2026 ClipCourt. All rights reserved.</p>
-    </footer>
+    <section class="closing wrap" aria-labelledby="closing-title"><div><p class="eyebrow">On your device</p><h2 id="closing-title">Your footage<br> stays yours.</h2></div><div class="closing-copy"><p>Editing and exporting happen on your device. No account needed, and your videos aren’t uploaded to our analytics service.</p><a class="text-link" href="/privacy">Read the privacy policy <span aria-hidden="true">↗</span></a><a class="button" href="https://apps.apple.com/app/clipcourt/id6758654179">Get ClipCourt <span aria-hidden="true">↗</span></a></div></section>
+  </main>
+  <footer class="site-footer wrap"><a class="brand" href="/" aria-label="ClipCourt home"><img src="/assets/app-icon.png" width="32" height="32" alt=""><span>ClipCourt</span></a><p>© 2026 ClipCourt</p><nav aria-label="Footer navigation"><a href="/privacy">Privacy</a><a href="/support">Support</a><a href="mailto:clipcourt.app@gmail.com">Contact</a></nav></footer>
 </body>
 </html>
